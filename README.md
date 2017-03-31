@@ -15,7 +15,9 @@ extends the standard `BiBTeX` model by an `acronym` entry.
     ]{biblatex}
  
 # License
-Copyright (c) 2012 Guido Governatori  
+Copyright (c) 2014 Joseph Scott
+
+forked from https://github.com/gvdgdo/biblatex-lncs.git, by Guido Governatori  
  
 This package may be distributed under the terms of the LaTeX Project
 Public License, as described in lppl.txt in the base LaTeX distribution.
