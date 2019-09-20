@@ -159,6 +159,10 @@
   \printfield{addendum}%
   \setunit{\bibpagerefpunct}\newblock
   \usebibmacro{pageref}%
+  \newunit
+  \usebibmacro{doi+eprint+url}%
+  \newunit
+  \printfield{note}%
   \newunit\newblock
   \iftoggle{bbx:related}
     {\usebibmacro{related:init}%
@@ -184,6 +188,10 @@
   \usebibmacro{addendum+pubstate}%
   \setunit{\bibpagerefpunct}\newblock
   \usebibmacro{pageref}%
+  \newunit
+  \usebibmacro{doi+eprint+url}%
+  \newunit
+  \printfield{note}%
   \newunit\newblock
   \iftoggle{bbx:related}
     {\usebibmacro{related:init}%
@@ -235,6 +243,10 @@
   \usebibmacro{addendum+pubstate}%
   \setunit{\bibpagerefpunct}\newblock
   \usebibmacro{pageref}%
+  \newunit
+  \usebibmacro{doi+eprint+url}%
+  \newunit
+  \printfield{note}%
   \newunit\newblock
   \iftoggle{bbx:related}
     {\usebibmacro{related:init}%
@@ -270,6 +282,10 @@
   \usebibmacro{addendum+pubstate}%
   \setunit{\bibpagerefpunct}\newblock
   \usebibmacro{pageref}%
+  \newunit
+  \usebibmacro{doi+eprint+url}%
+  \newunit
+  \printfield{note}%
   \newunit\newblock
   \iftoggle{bbx:related}
     {\usebibmacro{related:init}%
@@ -331,7 +347,42 @@
   \usebibmacro{finentry}
 }
 
-\DeclareBibliographyDriver{misc}{MISC}
+\DeclareBibliographyDriver{misc}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor+others/translator+others}%
+  \setunit*{\labelnamepunct}\newblock%
+  \usebibmacro{title}%
+  \addcomma\newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \printfield{howpublished}%
+  \newunit\newblock
+  \printfield{type}%
+  \newunit
+  \printfield{version}%
+  \setunit{\addspace}
+  \printfield{year}%
+  \newunit
+  \usebibmacro{doi+eprint+url}%
+  \newunit
+  \printfield{note}%
+  \newunit\newblock
+  \usebibmacro{organization+location+date}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+    {\usebibmacro{related:init}%
+     \usebibmacro{related}}
+    {}%
+  \usebibmacro{finentry}}
 
 \DeclareBibliographyDriver{thesis}{%
   \usebibmacro{bibindex}%
