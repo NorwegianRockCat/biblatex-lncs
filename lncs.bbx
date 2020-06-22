@@ -303,6 +303,7 @@
   \printfield{title}%
   \newunit\newblock
   \printfield{note}%
+  \nopunct%
   \usebibmacro{finentry}%
 }
 
@@ -382,6 +383,7 @@
     {\usebibmacro{related:init}%
      \usebibmacro{related}}
     {}%
+  \nopunct%
   \usebibmacro{finentry}}
 
 \DeclareBibliographyDriver{thesis}{%
@@ -392,6 +394,7 @@
   \printfield{title}%
   \newunit\newblock
   \usebibmacro{institution+location+date}%
+  \nopunct%
   \usebibmacro{finentry}%
 }
 
