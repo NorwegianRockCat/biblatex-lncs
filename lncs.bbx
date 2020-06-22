@@ -9,7 +9,7 @@
 
 \newtoggle{lncs:abbrev}
 \newtoggle{lncs:series}
-\newtoggle{lncs:conference}  
+\newtoggle{lncs:conference}
 \newtoggle{lncs:lncs}
 \DeclareBibliographyOption{acronym}[true]{\toggletrue{lncs:abbrev}}
 \DeclareBibliographyOption{series}[no]{
@@ -22,7 +22,7 @@
   \ifstrequal{#1}{full}{}{}
   \ifstrequal{#1}{acronym}{}{}
 }
-  
+
 \DeclareFieldFormat{labelnumberwidth}{#1.}
 \defbibenvironment{bibliography}
   {\list
@@ -57,6 +57,7 @@
 \DeclareFieldFormat{journaltitle}{#1}
 \DeclareFieldFormat[article,book,inproceedings,incollection, online,report,thesis]{title}{#1}
 \DeclareFieldFormat{booktitle}{#1}
+\DeclareFieldFormat[article]{volume}{\textbf{#1}}
 \DeclareFieldFormat[article]{pages}{#1}
 \DeclareFieldFormat{year}{(#1)}
 \DeclareFieldFormat{acronym}{#1}
